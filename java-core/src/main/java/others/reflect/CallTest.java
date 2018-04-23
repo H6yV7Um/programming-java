@@ -1,15 +1,11 @@
 package others.reflect;
 
-import javafx.scene.control.Cell;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.*;
 
-/**
+/**`
  * Created by yancy on 2018/3/28.
  */
 
