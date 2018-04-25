@@ -1,13 +1,14 @@
 package algorithms;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Given an array of integers,return indices of the two numbers such that
  * they add up to a specific target.You may assume that each input would
  * have exactly one solution, and you may not use the same element twice.
+ * <p>
+ * Related Topics
+ * 1、Array
+ * 2、Hash Table
  */
 public class TwoSum_1 {
 
