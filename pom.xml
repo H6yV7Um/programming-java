@@ -12,6 +12,7 @@
         <module>java-core</module>
         <module>java-spring</module>
         <module>java-database</module>
+        <module>java-leetcode</module>
     </modules>
 
     <properties>
