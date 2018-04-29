@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 引入外部配置文件 -->
+    <!--<properties resource="mysql.properties"></properties>-->
+
+
+    <!-- 配置日志信息，指定Mybatis所用日志具体实现 -->
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <!-- 配置要连接的数据库,每个数据库对应一个SqlSessionFactory，可以配置多个环境，但只能选择一个环境 -->
+    <environments default="development">
+        <environment id="development">
+            <!-- 配置事务管理，type="JDBC" 代表直接使用 JDBC 的提交和回滚设置 -->
+            <transactionManager type="JDBC"/>
+
+            <!-- mybatis提供了3种数据源类型，分别是：POOLED,UNPOOLED,JNDI -->
+            <!-- POOLED 表示支持JDBC数据源连接池 -->
+            <!-- UNPOOLED 表示不支持数据源连接池 -->
+            <!-- JNDI 表示支持外部数据源连接池 -->
+            <!-- POOLED 表示支持JDBC数据源连接池的实现 -->
+            <!-- 配置数据库连接池(DataSource),由 Mybatis 管理，数据库名是 db_A，MySQL 用户名 root，密码为空 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/db_A"/>
+                <property name="username" value="root"/>
+                <property name="password" value="271828lhy"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- mappers告诉Mybatis去哪里找持久化类的映射文件，可以有多个Mapper -->
+    <mappers>
+        <!--1.使用类路径查找资源文件-->
+        <mapper resource="mapper/UserMapper.xml"/>
+        <!--2.使用本地文件-->
+        <!--<mapper url=""/>-->
+        <!--3.使用接口类 使用Mapper代理时，这个会报错-->
+        <!--<mapper class="mybatis.UserMapper"/>-->
+    </mappers>
+    <!--<mappers>-->
+    <!--4.使用包名-->
+    <!--<package name="mybatis/"/>-->
+    <!--</mappers>-->
+</configuration>

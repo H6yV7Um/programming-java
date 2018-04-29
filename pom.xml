@@ -13,12 +13,17 @@
         <module>java-spring</module>
         <module>java-database</module>
         <module>java-leetcode</module>
+        <module>java-mybaits</module>
     </modules>
 
     <properties>
         <fastjson.version>1.2.39</fastjson.version>
         <spring.version>5.0.5.RELEASE</spring.version>
         <lombok.version>1.16.20</lombok.version>
+        <mysql.connector.version>5.1.46</mysql.connector.version>
+        <mybatis.version>3.3.0</mybatis.version>
+        <dbcp.version>1.4</dbcp.version>
+        <log4j.version>1.2.17</log4j.version>
     </properties>
 
     <dependencyManagement>
@@ -39,6 +44,30 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>${dbcp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
