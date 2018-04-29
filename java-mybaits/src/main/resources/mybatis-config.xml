@@ -38,7 +38,7 @@
         <!--2.使用本地文件-->
         <!--<mapper url=""/>-->
         <!--3.使用接口类 使用Mapper代理时，这个会报错-->
-        <!--<mapper class="mybatis.UserMapper"/>-->
+        <!--<mapper clamybatis.xml.UserMapperpper"/>-->
     </mappers>
     <!--<mappers>-->
     <!--4.使用包名-->

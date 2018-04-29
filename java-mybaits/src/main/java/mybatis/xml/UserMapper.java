@@ -1,6 +1,7 @@
-package mybatis;
+package mybatis.xml;
 
 import entity.User;
+import org.apache.ibatis.annotations.Insert;
 
 /**
  * Created by yancy on 2018/4/29.
@@ -25,10 +26,14 @@ public interface UserMapper {
      *     <mapper resource="mapper/UserMapper.xml"/>
      * </mappers>
      *
+     * <p>
+     * 可以使用注解，而不用XML文件
+     *
      * @param user
      * @return
      * @throws Exception
      */
+//    @Insert("INSERT INTO USER(username,password,sex,address) VALUES (#{username},#{password},#{sex},#{address})")
     int insertUser(User user) throws Exception;
 
 
